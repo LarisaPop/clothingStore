@@ -1,2 +1,2 @@
 # clothingStore
-### the project is on master's branch
+### the project is on master branch
