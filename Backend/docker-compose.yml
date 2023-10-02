@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  spring-app:
+    image: backendimage
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql-container
+
+  angular-app:
+    image: frontendimage
+    ports:
+      - "8085:8085"
+
+  mysql-container:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
+#version: "3"
+#services:
+#  backend:
+#    build:
+#      context: ./backend
+#      dockerfile: backendimage
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - db
+#
+#  frontend:
+#    build:
+#      context: ./frontend
+#      dockerfile: frontendimage
+#    ports:
+#      - "8085:8085"
+#
+#  db:
+#    image: mysql:latest
+#    environment:
+#      MYSQL_ROOT_PASSWORD: 1234
+#      MYSQL_DATABASE: psdb
+#    ports:
+#      - "3306:3306"
