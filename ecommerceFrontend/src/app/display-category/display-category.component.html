@@ -15,7 +15,7 @@
 
       <div class="card-body">
         <a (click)="sngleProduct(product.id)"><img class="card-img-top img-thumbnail"
-            style="width: 230px; height: 300px; cursor: pointer;" src={{product.pictureUrl}} alt="image"></a>
+            style="width: 230px; height: 300px; cursor: pointer;" src="{{product.pictureUrl}}" alt="image"></a>
         <h5 class="card-title" id="price">Price = {{product.price}}<i class="fas fa-dollar-sign"></i>
           <button title="Information" id="btn" (click)=showUndoBtn(i) (click)="productInfo(product.id)">
             <i class="fas fa-info-circle"></i></button>

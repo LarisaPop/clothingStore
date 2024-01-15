@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
     console.log(this.username)
     this.userService.addUser(this.user).subscribe(user => {
       this.user = user;
+      this.userService.saveUsername(user.username);
       window.location.replace("/")
     });
   }
@@ -33,7 +34,7 @@ export class LoginComponent implements OnInit {
     console.log(this.username)
     this.userService.addUser(this.user).subscribe(user => {
       this.user = user;
-      this.userService.saveUsername(user.username);
+      // this.userService.saveUsername(user.username);
       //window.location.replace("/")
     });
   }

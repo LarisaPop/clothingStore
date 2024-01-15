@@ -14,7 +14,7 @@ import com.ecommerce.service.UserService;
 @RestController
 @RequestMapping(value = "/api")
 @CrossOrigin(origins = "*")
-public class UserController {
+public class                                                                                                                                                                                                            UserController {
 
 	@Autowired
 	private UserService userService;
